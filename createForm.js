@@ -87,13 +87,13 @@ function addQuestion(form, question) {
           .build();
         item.setFeedbackForIncorrect(incorrectFeedback);
       }
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     case "Essay":
       item = form.addParagraphTextItem().setTitle(stemText);
       item.setPoints(1);
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     case "MC":
@@ -149,7 +149,7 @@ function addQuestion(form, question) {
       } else {
         throw "Missing different choice for the question";
       }
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     case "Matching":
@@ -170,7 +170,7 @@ function addQuestion(form, question) {
         .setColumns(cols);
       item.setHelpText("Note: this MATCHING question did not completely import from GIFT because Google's API doesn't allow creating the Answer Key (or setting the points). You can do it manually by matching the following answers:\n" + choiceString);
       // item.setPoints(1);     // not supported by Google (yet?)
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     case "Short":
@@ -183,7 +183,7 @@ function addQuestion(form, question) {
       item.setHelpText("Note: this SHORT ANSWER question did not completely import from GIFT because Google's API doesn't allow creating the accepted answers in the Answer Key. You can do it manually by adding the following answers:\n" + choiceString);
       item.setPoints(1);
       // TODO support feedback for specific answers?
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     case "Numerical":
@@ -203,7 +203,7 @@ function addQuestion(form, question) {
           throw "Missing different choice for the question";
         }
       }
-      item.setRequired(true);
+      // item.setRequired(true);
       break;
 
     default:
